@@ -32,7 +32,8 @@ func usage(errmsg string) {
 
 func main() {
 	const svcName = "HUUZKEE"
-
+	const svcDesc = "HUUZKEE Service"
+	
 	isIntSess, err := svc.IsAnInteractiveSession()
 	if err != nil {
 		log.Fatalf("failed to determine if we are running in an interactive session: %v", err)
@@ -52,7 +53,7 @@ func main() {
 		runService(svcName, true)
 		return
 	case "install":
-		err = installService(svcName, "my service")
+		err = installService(svcName, svcDesc )
 	case "remove":
 		err = removeService(svcName)
 	case "start":
