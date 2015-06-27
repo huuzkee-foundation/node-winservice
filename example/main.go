@@ -31,7 +31,7 @@ func usage(errmsg string) {
 }
 
 func main() {
-	const svcName = "HUUZKEE-Node-Srv"
+	const svcName = "HUUZKEE"
 
 	isIntSess, err := svc.IsAnInteractiveSession()
 	if err != nil {
